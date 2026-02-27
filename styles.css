@@ -125,6 +125,30 @@ a:hover {
     text-decoration: none;
 }
 
+/* Logo image and text */
+.logo-img {
+    height: 42px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.logo-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--color-accent);
+}
+
+@media (max-width: 480px) {
+    .logo-text { display: none; }
+    .logo-img { height: 36px; }
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -503,6 +527,159 @@ a:hover {
     flex-wrap: wrap;
 }
 
+/* ===== Mobile bottom navigation ===== */
+.mobile-footer-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--color-dark-brown);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 6px 0;
+    z-index: 1500;
+    justify-content: space-around;
+}
+
+.mobile-nav-item {
+    color: var(--color-text-light);
+    font-size: 1.4rem;
+    text-decoration: none;
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-item:hover {
+    color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+    .mobile-footer-nav { display: flex; }
+}
+
+/* ===== Footer / Site credit ===== */
+.cta-footer {
+    padding: 30px 0 50px;
+    border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+.cta-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+/* Центруємо кнопки у футері */
+.cta-actions {
+    justify-content: center;
+}
+
+.site-credit {
+    text-align: center;
+    margin-top: 6px;
+    color: rgba(232,216,200,0.9);
+}
+
+.github-link {
+    display: inline-block;
+    color: var(--color-light);
+    background: rgba(255,255,255,0.03);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease;
+}
+
+.github-link:hover {
+    background: var(--color-accent);
+    color: var(--color-dark-brown);
+    transform: translateY(-2px);
+}
+
+.footer-text {
+    font-size: 0.85rem;
+    color: rgba(232,216,200,0.85);
+    margin-top: 6px;
+    letter-spacing: 0.4px;
+}
+
+@media (min-width: 800px) {
+    .cta-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .site-credit {
+        text-align: right;
+    }
+}
+
+/* GitHub button styles */
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-light);
+    background: rgba(255,255,255,0.03);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.2s ease, transform 0.12s ease;
+}
+
+.github-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.github-btn:hover {
+    background: var(--color-accent);
+    color: var(--color-dark-brown);
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    padding-top: 10px;
+    padding-bottom: 24px;
+}
+
+.footer-bottom .footer-text {
+    text-align: center;
+    color: rgba(232,216,200,0.9);
+}
+
+/* Видимість та стилі для світлого фонового блоку (section-light) */
+.section-light .cta-footer .footer-text {
+    color: var(--color-text-dark);
+}
+
+/* GitHub кнопка має бути статично видима */
+.github-btn {
+    opacity: 1 !important;
+}
+
+/* Адаптація GitHub кнопки на світлому фоні */
+.section-light .github-btn {
+    background: var(--color-dark-brown);
+    color: var(--color-light);
+}
+.section-light .github-btn:hover {
+    background: var(--color-accent);
+    color: var(--color-dark-brown);
+}
+
 /* ===== Анімації ===== */
 @keyframes fadeInUp {
     from {
@@ -560,6 +737,18 @@ a:hover {
 
 /* ===== Адаптив ===== */
 @media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    #hero {
+        margin-top: 0;
+    }
+
+    body {
+        padding-bottom: 64px;
+    }
+
     .navbar-content {
         flex-direction: column;
         gap: 20px;
@@ -619,6 +808,12 @@ a:hover {
     .btn {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        padding-bottom: 0;
     }
 }
 
