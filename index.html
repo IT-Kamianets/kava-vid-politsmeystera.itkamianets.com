@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кава від Поліцмейстера — Кам'янець-Подільський</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Фіксована навігація -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="#hero" class="logo">☕ Кава від Поліцмейстера</a>
+            <ul class="nav-links">
+                <li><a href="#about">Про нас</a></li>
+                <li><a href="#menu">Меню</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="#reviews">Відгуки</a></li>
+                <li><a href="#contact">Контакти</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero секція -->
+    <header id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Кава від Поліцмейстера</h1>
+            <p class="hero-subtitle"><em>Смак історії у кожній чашці</em></p>
+            <a href="#contact" class="btn btn-primary">Забронювати столик</a>
+        </div>
+    </header>
+
+    <!-- Про нас -->
+    <section id="about" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Про нас</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <p>Кава від Поліцмейстера — це не просто кафе, це pont между історією старого Кам'янця-Подільського та сучасною кавовою культурою. Назва нашого закладу нагадує про патріотичний дух міста, про часи, коли справедливість охороняла цей чарівний край.</p>
+                <p>Ми подаємо <strong>авторські кави</strong> та <strong>домашні десерти</strong>, створені за старими рецептами з сучасним твістом. <strong>Затишна атмосфера</strong> нашого інтер'єру запрошує вас насолодитися кожною хвилиною.</p>
+                <p>Сніданки, обідні комбо-меню, вечірні напої — все це середовище, розроблене для тих, хто цінує якість та автентичність.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Меню -->
+    <section id="menu" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Наші смаколики</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="menu-grid">
+                <!-- Кава -->
+                <div class="menu-card fade-in">
+                    <div class="menu-icon">☕</div>
+                    <h3>Еспресо</h3>
+                    <p>Насичена, гарячка, з тонкими нотками шоколаду</p>
+                </div>
+
+                <div class="menu-card fade-in">
+                    <div class="menu-icon">☕</div>
+                    <h3>Капучіно</h3>
+                    <p>Креміст пінки, ідеальна гармонія молока та кави</p>
+                </div>
+
+                <div class="menu-card fade-in">
+                    <div class="menu-icon">☕</div>
+                    <h3>Лате</h3>
+                    <p>М'яке, ніжне, й утруждено комфортне</p>
+                </div>
+
+                <!-- Авторські напої -->
+                <div class="menu-card fade-in">
+                    <div class="menu-icon">🍶</div>
+                    <h3>Кава з кмелем</h3>
+                    <p>Авторський мікс з медом та традиційними спеціями</p>
+                </div>
+
+                <div class="menu-card fade-in">
+                    <div class="menu-icon">🍶</div>
+                    <h3>Полічні напої</h3>
+                    <p>Сезонні рецепти з фруктами та ароматами міста</p>
+                </div>
+
+                <!-- Десерти -->
+                <div class="menu-card fade-in">
+                    <div class="menu-icon">🍰</div>
+                    <h3>Домашні десерти</h3>
+                    <p>Пироги, капкейки та торти за старими рецептами</p>
+                </div>
+
+                <div class="menu-card fade-in">
+                    <div class="menu-icon">🍰</div>
+                    <h3>Шоколадний фондан</h3>
+                    <p>Таємниця із тіста та рідкого центру з какао</p>
+                </div>
+
+                <!-- Сніданки -->
+                <div class="menu-card fade-in">
+                    <div class="menu-icon">🥐</div>
+                    <h3>Сніданки</h3>
+                    <p>Класичні корзини, омлети та свіжа хлібопекарня</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Галерея</h2>
+                <div class="divider"></div>
+            </div>
+            <!-- кожен блок може містити по три фото -->
+            <div class="gallery-grid">
+                <div class="gallery-block">
+                    <button class="carousel-btn prev">&#10094;</button>
+                    <div class="carousel-slides">
+                        <img src="assets/placeholder1.jpg" alt="Фото 1" loading="lazy">
+                        <img src="assets/placeholder2.jpg" alt="Фото 2" loading="lazy">
+                        <img src="assets/placeholder3.jpg" alt="Фото 3" loading="lazy">
+                    </div>
+                    <button class="carousel-btn next">&#10095;</button>
+                </div>
+                <div class="gallery-block">
+                    <button class="carousel-btn prev">&#10094;</button>
+                    <div class="carousel-slides">
+                        <img src="assets/placeholder4.jpg" alt="Фото 4" loading="lazy">
+                        <img src="assets/placeholder5.jpg" alt="Фото 5" loading="lazy">
+                        <img src="assets/placeholder6.jpg" alt="Фото 6" loading="lazy">
+                    </div>
+                    <button class="carousel-btn next">&#10095;</button>
+                </div>
+                <div class="gallery-block">
+                    <button class="carousel-btn prev">&#10094;</button>
+                    <div class="carousel-slides">
+                        <img src="assets/placeholder7.jpg" alt="Фото 7" loading="lazy">
+                        <img src="assets/placeholder8.jpg" alt="Фото 8" loading="lazy">
+                        <img src="assets/placeholder9.jpg" alt="Фото 9" loading="lazy">
+                    </div>
+                    <button class="carousel-btn next">&#10095;</button>
+                </div>
+                <div class="gallery-block">
+                    <button class="carousel-btn prev">&#10094;</button>
+                    <div class="carousel-slides">
+                        <img src="assets/placeholder10.jpg" alt="Фото 10" loading="lazy">
+                        <img src="assets/placeholder11.jpg" alt="Фото 11" loading="lazy">
+                        <img src="assets/placeholder12.jpg" alt="Фото 12" loading="lazy">
+                    </div>
+                    <button class="carousel-btn next">&#10095;</button>
+                </div>
+                <div class="gallery-block">
+                    <button class="carousel-btn prev">&#10094;</button>
+                    <div class="carousel-slides">
+                        <img src="assets/placeholder13.jpg" alt="Фото 13" loading="lazy">
+                        <img src="assets/placeholder14.jpg" alt="Фото 14" loading="lazy">
+                        <img src="assets/placeholder15.jpg" alt="Фото 15" loading="lazy">
+                    </div>
+                    <button class="carousel-btn next">&#10095;</button>
+                </div>
+                <div class="gallery-block">
+                    <button class="carousel-btn prev">&#10094;</button>
+                    <div class="carousel-slides">
+                        <img src="assets/placeholder16.jpg" alt="Фото 16" loading="lazy">
+                        <img src="assets/placeholder17.jpg" alt="Фото 17" loading="lazy">
+                        <img src="assets/placeholder18.jpg" alt="Фото 18" loading="lazy">
+                    </div>
+                    <button class="carousel-btn next">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Відгуки -->
+    <section id="reviews" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Що кажуть гості</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p>"Чудова кава й відчуваєте себе, як у дорогому гарякому підземеллі. Персонал знає всі тонкощі кав'ярні мистецтва."</p>
+                    <span class="reviewer-name">— Оксана</span>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p>"Затишне місце для зустрічей. Атмосфера такі занурювальна, що можна забути час. Рідкісне поєднання якості та серця."</p>
+                    <span class="reviewer-name">— Ігор</span>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p>"Десерти смакують як вдома, але з премієм-класу рук. Рекомендую приголос! Це не просто кафе — це переживання."</p>
+                    <span class="reviewer-name">— Марія</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакти -->
+    <section id="contact" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Контакти</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Адреса</h3>
+                    <p><a href="https://maps.app.goo.gl/SkYMB2pWdympN5Gg7" target="_blank">вул. Старостіна, 12<br>Кам'янець-Подільський, 32300</a></p>
+                </div>
+                <div class="contact-info fade-in">
+                    <h3>Години роботи</h3>
+                    <p>Пн–Чт: 8:00–20:00<br>Пт–Нд: 8:00–22:00</p>
+                </div>
+                <div class="contact-info fade-in">
+                    <h3>Зв'язок</h3>
+                    <p> +380 99 123 4567<br>📱 Instagram: @kava_vid_politsmeystera.kp</p>
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a href="https://www.instagram.com/kava_vid_politsmeystera.kp/" class="btn btn-primary" target="_blank">📸 Написати в Instagram</a>
+                <a href="https://wa.me/380991234567" class="btn btn-secondary" target="_blank">💬 WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" src="" alt="">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
