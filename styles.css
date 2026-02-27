@@ -108,6 +108,12 @@ a:hover {
     transition: all 0.3s ease;
 }
 
+.navbar.navbar-scrolled {
+    background: rgba(30, 26, 23, 0.94);
+    border-bottom-color: rgba(200, 162, 126, 0.35);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
 .navbar-content {
     max-width: 1100px;
     margin: 0 auto;
@@ -178,6 +184,14 @@ a:hover {
     width: 100%;
 }
 
+.nav-links a.active-link {
+    color: var(--color-accent);
+}
+
+.nav-links a.active-link::after {
+    width: 100%;
+}
+
 /* ===== Hero секція ===== */
 #hero {
     height: 100vh;
@@ -199,6 +213,7 @@ a:hover {
     bottom: 0;
     background: radial-gradient(circle at center, rgba(200, 162, 126, 0.05), rgba(30, 26, 23, 0.7));
     z-index: 1;
+    transition: transform 0.2s linear;
 }
 
 .hero-content {
@@ -206,6 +221,7 @@ a:hover {
     z-index: 2;
     text-align: center;
     animation: fadeInUp 1s ease-out;
+    transition: transform 0.2s linear;
 }
 
 .hero-title {
@@ -590,20 +606,18 @@ a:hover {
 }
 
 .github-link {
-    display: inline-block;
-    color: var(--color-light);
-    background: rgba(255,255,255,0.03);
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 0.95rem;
+    display: inline;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
     text-decoration: none;
-    transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease;
+    border-bottom: 1px solid currentColor;
+    transition: opacity 0.2s ease;
 }
 
 .github-link:hover {
-    background: var(--color-accent);
-    color: var(--color-dark-brown);
-    transform: translateY(-2px);
+    opacity: 0.75;
 }
 
 .footer-text {
@@ -616,47 +630,26 @@ a:hover {
 @media (min-width: 800px) {
     .cta-inner {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
     }
     .site-credit {
-        text-align: right;
+        text-align: center;
     }
 }
 
-/* GitHub button styles */
-.github-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--color-light);
-    background: rgba(255,255,255,0.03);
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: background 0.25s ease, color 0.2s ease, transform 0.12s ease;
-}
-
-.github-btn svg {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-}
-
-.github-btn:hover {
-    background: var(--color-accent);
-    color: var(--color-dark-brown);
-    transform: translateY(-2px);
-}
-
 .footer-bottom {
-    padding-top: 10px;
+    padding-top: 22px;
     padding-bottom: 24px;
 }
 
 .footer-bottom .footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     text-align: center;
+    flex-wrap: wrap;
     color: rgba(232,216,200,0.9);
 }
 
@@ -665,19 +658,8 @@ a:hover {
     color: var(--color-text-dark);
 }
 
-/* GitHub кнопка має бути статично видима */
-.github-btn {
-    opacity: 1 !important;
-}
-
-/* Адаптація GitHub кнопки на світлому фоні */
-.section-light .github-btn {
-    background: var(--color-dark-brown);
-    color: var(--color-light);
-}
-.section-light .github-btn:hover {
-    background: var(--color-accent);
-    color: var(--color-dark-brown);
+.section-light .footer-bottom .github-link {
+    color: inherit;
 }
 
 /* ===== Анімації ===== */
@@ -714,7 +696,14 @@ a:hover {
 
 .fade-in {
     opacity: 0;
-    animation: fadeInUp 0.6s ease-out forwards;
+    transform: translateY(24px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Затримки для послідовної анімації */
